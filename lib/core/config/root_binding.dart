@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:get/get_instance/src/bindings_interface.dart';
+import 'package:lifeosai/presantation/controllers/home_controller.dart';
 import 'package:lifeosai/presantation/controllers/signin_controller.dart';
 import 'package:lifeosai/presantation/controllers/signup_controller.dart';
 
@@ -11,5 +11,6 @@ class RootBinding extends Bindings {
     Get.lazyPut(()=> SplashController(), fenix: true);
     Get.lazyPut(()=> SignInController(), fenix: true);
     Get.lazyPut(()=> SignUpController(), fenix: true);
+    Get.lazyPut(()=> HomeController(), fenix: true);
   }
   }

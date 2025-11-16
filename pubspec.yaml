@@ -12,6 +12,18 @@ dependencies:
   cupertino_icons: ^1.0.8
 #  State managment
   get: ^4.7.2
+  #  Services
+  http: ^0.13.3
+  http_interceptor: ^1.0.2
+  logger: ^1.1.0
+  dartz: ^0.10.1
+#Media
+  image_picker: ^1.1.2
+  video_player: ^2.9.2
+  flutter_tts: ^4.2.1
+  lottie: ^2.7.0
+
+
 
 dev_dependencies:
   flutter_test:
@@ -26,6 +38,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/lotties/
 
   # fonts:
   #   - family: Schyler
