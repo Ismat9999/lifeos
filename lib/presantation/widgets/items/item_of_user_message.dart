@@ -1,8 +1,6 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
-
-import '../../domain/models/message_model.dart';
+import '../../../domain/models/message_model.dart';
 
 Widget itemOfUserMessage(MessageModel message){
   return Column(

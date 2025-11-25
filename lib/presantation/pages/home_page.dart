@@ -5,8 +5,10 @@ import 'package:get/get.dart';
 import 'package:lifeosai/presantation/controllers/home_controller.dart';
 import 'package:lottie/lottie.dart';
 
-import '../widgets/item_of_gemini_message.dart';
-import '../widgets/item_of_user_message.dart';
+import '../widgets/items/item_build_menu_items.dart';
+import '../widgets/items/item_builder_header.dart';
+import '../widgets/items/item_of_gemini_message.dart';
+import '../widgets/items/item_of_user_message.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -22,20 +24,42 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: const SizedBox(
-          height: 45,
-          child: Image(
-            image: AssetImage('assets/images/lifeos.png'),
-            fit: BoxFit.cover,
-          ),
+        backgroundColor: Color.fromRGBO(40, 15, 50, 1),
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.g_translate_outlined,color: Colors.white,)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.exit_to_app_outlined,color: Colors.white,)),
+        ],
+        iconTheme: IconThemeData(
+          color: Colors.white,   // drawer icon rangi
         ),
-        elevation: 0,
       ),
       drawer: NavigationDrawer(
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromRGBO(40, 15, 50, 1),
           children: [
-            Container(),
+            Container(
+              padding: EdgeInsets.all(20),
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Color.fromRGBO(40, 15, 50, 1),
+                    Color.fromRGBO(20, 18, 50, 1),
+                  ],
+                ),
+              ),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    itemBuilderHeader(context),
+                  itemBuildMenuItems(context),
+                  ],
+                ),
+              ),
+            ),
           ],
       ),
       body: Container(

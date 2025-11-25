@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
-import '../../core/services/utils_service.dart';
-import '../../domain/models/message_model.dart';
+import '../../../core/services/utils_service.dart';
+import '../../../domain/models/message_model.dart';
 
 Widget itemOfGeminiMessage(MessageModel message){
   return Container(
