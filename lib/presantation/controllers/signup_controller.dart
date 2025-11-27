@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../pages/home_page.dart';
+import 'package:lifeosai/presantation/pages/otp_verification_page.dart';
 import '../pages/sign_in_page.dart';
 
 class SignUpController extends GetxController{
@@ -12,8 +11,8 @@ class SignUpController extends GetxController{
 
   bool isLoading = false;
 
-  void callHomePage() {
-    Get.off(HomePage());
+  void callOtpPage() {
+    Get.off(OtpVerificationPage());
   }
 
   void callSignInPage() {

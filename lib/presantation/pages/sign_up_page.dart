@@ -11,176 +11,248 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  var signUpController= Get.find<SignUpController>();
+  var signUpController = Get.find<SignUpController>();
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+      ),
+      backgroundColor: Colors.white,
       body: GetBuilder<SignUpController>(
-        builder: (_){
-          return Container(
-            padding: EdgeInsets.all(30),
-            width: MediaQuery.of(context).size.width,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Color.fromRGBO(40, 15, 50, 1),
-                    Color.fromRGBO(20, 18, 50, 1),
-                  ]),
-            ),
-            child: Stack(
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
+        builder: (_) {
+          return SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+              width: MediaQuery.of(context).size.width,
+              child: Center(
+                child: Column(
                   children: [
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "LifeOs Rounded",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 45,
+                    Text(
+                      "Akkauntga kirish",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 30,),
+                    Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              "Ism:",
+                              style: TextStyle(
+                                  color: Colors.blueGrey,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          width: double.infinity,
+                          height: 50,
+                          child: Center(
+                            child: TextField(
+                              style: TextStyle(color: Colors.black, fontSize: 17),
+                              cursorColor: Colors.black,
+                              decoration: InputDecoration(
+                                contentPadding: EdgeInsets.symmetric(
+                                    vertical: 5, horizontal: 10),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                  borderSide: const BorderSide(
+                                    color: Colors.blueGrey,
+                                    width: 2,
+                                  ),
                                 ),
-                          ),
-                          // fullname
-                          Container(
-                            margin: const EdgeInsets.only(top: 10),
-                            height: 50,
-                            padding: const EdgeInsets.only(left: 10, right: 10),
-                            decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(7)),
-                            child: TextField(
-                              controller: signUpController.fullnameController,
-                              style: const TextStyle(color: Colors.white),
-                              cursorColor: Colors.white,
-                              decoration: const InputDecoration(
-                                hintText: "Full Name",
-                                border: InputBorder.none,
-                                hintStyle:
-                                TextStyle(fontSize: 17, color: Colors.white54),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                  borderSide: const BorderSide(
+                                    color: Colors.indigo,
+                                    width: 2,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
-
-                          //   email
-                          Container(
-                            margin: const EdgeInsets.only(top: 10),
-                            height: 50,
-                            padding: const EdgeInsets.only(left: 10, right: 10),
-                            decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(7)),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "Email yoki telefon raqam:",
+                              style: TextStyle(
+                                  color: Colors.blueGrey,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          width: double.infinity,
+                          height: 50,
+                          child: Center(
                             child: TextField(
-                              controller: signUpController.emailController,
-                              style: const TextStyle(color: Colors.white),
-                              cursorColor: Colors.white,
-                              decoration: const InputDecoration(
-                                hintText: "Email",
-                                border: InputBorder.none,
-                                hintStyle:
-                                TextStyle(fontSize: 17, color: Colors.white54),
+                              style: TextStyle(color: Colors.black, fontSize: 17),
+                              cursorColor: Colors.black,
+                              decoration: InputDecoration(
+                                contentPadding: EdgeInsets.symmetric(
+                                    vertical: 5, horizontal: 10),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                  borderSide: const BorderSide(
+                                    color: Colors.blueGrey,
+                                    width: 2,
+                                  ),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                  borderSide: const BorderSide(
+                                    color: Colors.indigo,
+                                    width: 2,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
-
-                          //   password
-                          Container(
-                            margin: const EdgeInsets.only(top: 10),
-                            height: 50,
-                            padding: const EdgeInsets.only(left: 10, right: 10),
-                            decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(7)),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "Parol:",
+                              style: TextStyle(
+                                  color: Colors.blueGrey,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          width: double.infinity,
+                          height: 50,
+                          child: Center(
                             child: TextField(
-                              controller: signUpController.passwordController,
-                              style: const TextStyle(color: Colors.white),
-                              cursorColor: Colors.white,
-                              decoration: const InputDecoration(
-                                hintText: "Password",
-                                border: InputBorder.none,
-                                hintStyle:
-                                TextStyle(fontSize: 17, color: Colors.white54),
+                              style: TextStyle(color: Colors.black, fontSize: 17),
+                              cursorColor: Colors.black,
+                              decoration: InputDecoration(
+                                contentPadding: EdgeInsets.symmetric(
+                                    vertical: 5, horizontal: 10),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                  borderSide: const BorderSide(
+                                    color: Colors.blueGrey,
+                                    width: 2,
+                                  ),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                  borderSide: const BorderSide(
+                                    color: Colors.indigo,
+                                    width: 2,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
-
-                          // confirm password
-                          Container(
-                            margin: const EdgeInsets.only(top: 10),
-                            height: 50,
-                            padding: const EdgeInsets.only(left: 10, right: 10),
-                            decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(7)),
-                            child: TextField(
-                              controller: signUpController.cpasswordController,
-                              style: const TextStyle(color: Colors.white),
-                              cursorColor: Colors.white,
-                              decoration: const InputDecoration(
-                                hintText: "Confirm Password",
-                                border: InputBorder.none,
-                                hintStyle:
-                                TextStyle(fontSize: 17, color: Colors.white54),
-                              ),
-                            ),
-                          ),
-
-                          //   signIn
-                          GestureDetector(
-                            onTap: () {
-                              signUpController.callHomePage();
-                            },
-                            child: Container(
-                              margin: EdgeInsets.only(top: 10),
-                              height: 50,
-                              padding: EdgeInsets.only(left: 10),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              height: 18,
+                              width: 18,
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(7),
-                                color: Colors.white.withOpacity(0.2),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  "Sign Up",
-                                  style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
-                                ),
+                                borderRadius: BorderRadius.circular(5),
+                                border:
+                                    Border.all(width: 2, color: Colors.blueGrey),
                               ),
                             ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              "Foydalanish shartlariga roziman",
+                              style: TextStyle(
+                                  color: Colors.blueGrey,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 30,),
+                    GestureDetector(
+                      onTap: () {
+                        signUpController.callOtpPage();
+                      },
+                      child: Container(
+                        height: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          border: Border.all(width: 2, color: Colors.indigo),
+                          color: Colors.white,
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Ro'yxatdan o'tish",
+                            style: TextStyle(
+                                color: Colors.indigo,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
                           ),
-                        ],
+                        ),
                       ),
                     ),
-                    // footer
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    SizedBox(height: 30,),
+                    Column(
                       children: [
-                        const Text(
-                          "All ready have an account?",
-                          style: TextStyle(color: Colors.white, fontSize: 16),
+                        Text(
+                          "Allaqachon ro'yxatdan o'tganmisiz?",
+                          style: TextStyle(color: Colors.blueGrey),
                         ),
-                        const SizedBox(
-                          width: 10,
-                        ),
+                        SizedBox(height: 20,),
                         GestureDetector(
-                            onTap: () {
-                              signUpController.callSignInPage();
-                            },
-                            child: const Text(
-                              "Sign In",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.bold),
-                            )),
+                          onTap: () {
+                            signUpController.callSignInPage();
+                          },
+                          child: Container(
+                            height: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(25),
+                              border: Border.all(width: 2, color: Colors.indigo),
+                              color: Colors.white,
+                            ),
+                            child: Center(
+                              child: Text(
+                                "Kirish",
+                                style: TextStyle(
+                                    color: Colors.indigo,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ],
                 ),
-              ],
+              ),
             ),
           );
         },

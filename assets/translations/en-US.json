@@ -1,0 +1,16 @@
+{
+  "title1": "Home",
+  "title2": "Profile",
+  "title3": "Settings",
+  "title4": "Language",
+  "title5": "Life Chat",
+  "index": "Life Index",
+  "message": "Message",
+  "signin": "Sign In",
+  "signup": "Sign Up",
+  "email": "Email",
+  "password": "Password",
+  "cpassword": "Confirm password",
+  "name": "Full name",
+  "register": "All ready have an account?"
+}
