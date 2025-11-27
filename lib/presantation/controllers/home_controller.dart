@@ -1,13 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../core/data/repositories_implement/gemini_talk_repository_impl.dart';
 import '../../core/services/log_service.dart';
 import '../../core/services/utils_service.dart';
 import '../../domain/models/message_model.dart';
-import '../../domain/usecase/gemini_text_only_use_case.dart';
-import '../../domain/usecase/genini_text_and_image_use_case.dart';
 
 
 class HomeController extends GetxController {
