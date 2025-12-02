@@ -1,10 +1,5 @@
 import 'package:get/get.dart';
-import 'package:lifeosai/presantation/controllers/drawer_controller.dart';
 import 'package:lifeosai/presantation/controllers/home_controller.dart';
-import 'package:lifeosai/presantation/controllers/lifeindex_controller.dart';
-import 'package:lifeosai/presantation/controllers/otp_controller.dart';
-import 'package:lifeosai/presantation/controllers/profile_controller.dart';
-import 'package:lifeosai/presantation/controllers/setting_controller.dart';
 import 'package:lifeosai/presantation/controllers/signin_controller.dart';
 import 'package:lifeosai/presantation/controllers/signup_controller.dart';
 
